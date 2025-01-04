@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    //Solution using createElement
+    const newParagraph1 = document.createElement("p");
+    newParagraph1.textContent = "This paragraph is added.";
+    newParagraph1.addEventListener("click", () => alert('test'));
+    document.getElementById("myDiv").appendChild(newParagraph1);
+
+    const newParagraph2 = document.createElement("p");
+    newParagraph2.textContent = "This paragraph is appended.";
+    document.getElementById("myDiv").appendChild(newParagraph2);
+  </script>
+</body>
+</html>
